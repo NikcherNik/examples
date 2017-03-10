@@ -144,23 +144,23 @@ function fireNotification(obj, event) {
 ##Send notification
 
 ```C#
- var pushEndpoint = @"https://updates.push.services.mozilla.com/wpush/v1/gAAAAABYwW2ck4Q-JQqcrLCsZjjnTxLCTwXmh...";
-                var p256dh = @"BE9ek+9pRE4RqKBvlfabIMH1DxkgbQcthxl0...";
-                var auth = @"cF7b/C6KyK82l5..."; var gcmAPIKey = @"AIzaSyD_Vskul6AeP6KV...";
-                var subscription = new PushSubscription(pushEndpoint, p256dh, auth);
+var pushEndpoint = @"https://updates.push.services.mozilla.com/wpush/v1/gAAAAABYwW2ck4Q-JQqcrLCsZjjnTxLCTwXmh...";
+var p256dh = @"BE9ek+9pRE4RqKBvlfabIMH1DxkgbQcthxl0...";
+var auth = @"cF7b/C6KyK82l5..."; var gcmAPIKey = @"AIzaSyD_Vskul6AeP6KV...";
+var subscription = new PushSubscription(pushEndpoint, p256dh, auth);
 
-                var webPushClient = new WebPushClient();
-                try
-                {
-                    log.DebugFormat(message.ToString());
-                    if (message.HasTag("active"))
-                    {
-                        webPushClient.SendNotification(subscription, "{\"msg\":" + "\"" + message.Body + "\",\"from\":" + "\"" + message.From + "\"}");
-                    }
-                   
-                }
-                catch (WebPushException exception)
-                {
+var webPushClient = new WebPushClient();
+try
+{
+    log.DebugFormat(message.ToString());
+    if (message.HasTag("active"))
+    {
+	webPushClient.SendNotification(subscription, "{\"msg\":" + "\"" + message.Body + "\",\"from\":" + "\"" + message.From + "\"}");
+    }
 
-                }
+}
+catch (WebPushException exception)
+{
+
+}
 ```
