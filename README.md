@@ -1,7 +1,7 @@
 # exemples
-/*==================================*/
-create notification in js file
-/*==================================*/
+
+##create notification in js file
+
 ```javascript
 Notification.requestPermission();
 if ('serviceWorker' in navigator) {
@@ -28,9 +28,9 @@ function initialiseState(registration) {
 }
 ```
 
-/*==================================*/
-SUBSCRIBE
-/*==================================*/
+
+##SUBSCRIBE
+
 ```javascript
 navigator.serviceWorker.ready.then(function(serviceWorkerRegistration) {
     serviceWorkerRegistration.pushManager.subscribe({ userVisibleOnly: true })
@@ -58,9 +58,8 @@ navigator.serviceWorker.ready.then(function(serviceWorkerRegistration) {
 });
 ```
 
-/*==================================*/
-UNSUBSCRIBE
-/*==================================*/
+
+##UNSUBSCRIBE
 ```javascript
 navigator.serviceWorker.ready.then(function (serviceWorkerRegistration) {
     serviceWorkerRegistration.pushManager.getSubscription().then(
@@ -76,10 +75,7 @@ navigator.serviceWorker.ready.then(function (serviceWorkerRegistration) {
         });
 });
 ```
-
-/*==================================*/
-SERVICE WORKER FILE
-/*==================================*/
+##SERVICE WORKER FILE
 
 ```javascript
 var port;
