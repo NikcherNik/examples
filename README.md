@@ -2,6 +2,7 @@
 /*==================================*/
 create notification in js file
 /*==================================*/
+```javascript
 Notification.requestPermission();
 if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('service_worker.js')
@@ -25,11 +26,12 @@ function initialiseState(registration) {
         return;
     }
 }
-
+```
 
 /*==================================*/
 SUBSCRIBE
 /*==================================*/
+```javascript
 navigator.serviceWorker.ready.then(function(serviceWorkerRegistration) {
     serviceWorkerRegistration.pushManager.subscribe({ userVisibleOnly: true })
         .then(function (subscription) {
@@ -54,11 +56,12 @@ navigator.serviceWorker.ready.then(function(serviceWorkerRegistration) {
             console.warn('Ошибка при получении данных о подписчике.', err);
         });
 });
-
+```
 
 /*==================================*/
 UNSUBSCRIBE
 /*==================================*/
+```javascript
 navigator.serviceWorker.ready.then(function (serviceWorkerRegistration) {
     serviceWorkerRegistration.pushManager.getSubscription().then(
         function(subscription) {
@@ -72,13 +75,13 @@ navigator.serviceWorker.ready.then(function (serviceWorkerRegistration) {
             });
         });
 });
-
+```
 
 /*==================================*/
 SERVICE WORKER FILE
 /*==================================*/
 
-
+```javascript
 var port;
 var showNotification = false;
 self.addEventListener('install', function (event) {
@@ -141,3 +144,4 @@ function fireNotification(obj, event) {
         tag: tag
 	}));
 }
+```
