@@ -75,6 +75,22 @@ navigator.serviceWorker.ready.then(function (serviceWorkerRegistration) {
         });
 });
 ```
+##Send message to service worker
+```javascript
+function sendMessageNotification(message) {
+	return new Promise(function (resolve, reject) {
+		var messageChannel = new MessageChannel();
+		messageChannel.port1.onmessage = function (event) {
+			if (event.data.error) {
+			  reject(event.data.error);
+			} else {
+			  resolve(event.data);
+			}
+		};
+		navigator.serviceWorker.controller.postMessage(message, [messageChannel.port2]);
+	});
+}
+```
 ##SERVICE WORKER FILE
 
 ```javascript
