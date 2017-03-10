@@ -150,9 +150,9 @@ function fireNotification(obj, event) {
     var body = obj.msg+"   "+showNotification;
     var tag = 'simple-push-notification-tag';
     event.waitUntil(self.registration.showNotification(title, {
-        icon:"https://d3b5653v7ash7c.cloudfront.net/studio/tag/nct.8.9.0/skins/default/images/onlyoffice_logo/favicon.ico",
-		title:title,
-		body: body,
+        icon:"https://....",
+	title:title,
+	body: body,
         tag: tag
 	}));
 }
