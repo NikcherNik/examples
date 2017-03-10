@@ -157,7 +157,7 @@ function fireNotification(obj, event) {
 	}));
 }
 ```
-##Send notification C#
+##Send notification ASP.NET
 
 ```C#
 var pushEndpoint = @"https://updates.push.services.mozilla.com/wpush/v1/gAAAAABYwW2ck4Q-JQqcrLCsZjjnTxLCTwXmh...";
