@@ -1,4 +1,4 @@
-# exemples
+# exemple push notification
 
 ##create notification in js file
 
@@ -157,7 +157,7 @@ function fireNotification(obj, event) {
 	}));
 }
 ```
-##Send notification
+##Send notification C#
 
 ```C#
 var pushEndpoint = @"https://updates.push.services.mozilla.com/wpush/v1/gAAAAABYwW2ck4Q-JQqcrLCsZjjnTxLCTwXmh...";
