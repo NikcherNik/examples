@@ -1,4 +1,4 @@
-##Animation
+## Animation
 ```css
 	-webkit-transition: all 0.2s ease;
 	-moz-transition: all 0.2s ease;
@@ -6,7 +6,7 @@
 	transition: all 0.2s ease;
 ```
 
-##SCALE
+## SCALE
 
 ```css
 	-webkit-transform: scale(0.8);
