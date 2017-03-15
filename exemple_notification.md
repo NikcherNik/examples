@@ -1,6 +1,6 @@
 # exemple push notification
 
-##create notification in js file
+## create notification in js file
 
 ```javascript
 Notification.requestPermission();
@@ -29,7 +29,7 @@ function initialiseState(registration) {
 ```
 
 
-##SUBSCRIBE
+## SUBSCRIBE
 
 ```javascript
 navigator.serviceWorker.ready.then(function(serviceWorkerRegistration) {
@@ -59,7 +59,7 @@ navigator.serviceWorker.ready.then(function(serviceWorkerRegistration) {
 ```
 
 
-##UNSUBSCRIBE
+## UNSUBSCRIBE
 ```javascript
 navigator.serviceWorker.ready.then(function (serviceWorkerRegistration) {
     serviceWorkerRegistration.pushManager.getSubscription().then(
@@ -75,7 +75,7 @@ navigator.serviceWorker.ready.then(function (serviceWorkerRegistration) {
         });
 });
 ```
-##Send message to service worker
+## Send message to service worker
 ```javascript
 function sendMessageNotification(message) {
 	return new Promise(function (resolve, reject) {
@@ -91,7 +91,7 @@ function sendMessageNotification(message) {
 	});
 }
 ```
-##SERVICE WORKER FILE
+## SERVICE WORKER FILE
 
 ```javascript
 var port;
@@ -157,7 +157,7 @@ function fireNotification(obj, event) {
 	}));
 }
 ```
-##Send notification ASP.NET
+## Send notification ASP.NET
 
 ```C#
 var pushEndpoint = @"https://updates.push.services.mozilla.com/wpush/v1/gAAAAABYwW2ck4Q-JQqcrLCsZjjnTxLCTwXmh...";
