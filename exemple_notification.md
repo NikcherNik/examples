@@ -1,4 +1,4 @@
-# exemple push notification
+# example push notification
 
 ## create notification in js file
 
