@@ -1,16 +1,16 @@
-##SharePoint ONLYOFFICE integration solution
+## SharePoint ONLYOFFICE integration solution
 
 This solution enables users to edit office documents from SharePoint using ONLYOFFICE Document Server. Currently the following document formats can be edited: DOCX, XLSX, PPTX, TXT. The above mentioned formats are also available for viewing together with PDF.
 The solution will create a new Edit in ONLYOFFICE menu option within the context menu of the file and the ribbon for Office documents. This allows multiple users to collaborate in real time and to save back those changes to SharePoint.
 
-#Deploying SharePoint ONLYOFFICE integration solution
+# Deploying SharePoint ONLYOFFICE integration solution
 
 	Upload *.wsp package and script Install.ps1 
 	Deploying an package to SharePoint using the script 
 		
 		.\Install.ps1 
 	
-#Configuring SharePoint ONLYOFFICE integration solution
+# Configuring SharePoint ONLYOFFICE integration solution
 	
 	In SharePoint open the ~/_layouts/15/Onlyoffice/Settings.aspx page with administrative settings. Enter the following address to connect ONLYOFFICE Document Server:
 		
@@ -18,7 +18,7 @@ The solution will create a new Edit in ONLYOFFICE menu option within the context
 	
 	Where the documentserver is the name of the server with the ONLYOFFICE Document Server installed. The address must be accessible for the user browser and from the SharePoint server. The SharePoint server address must also be accessible from ONLYOFFICE Document Server for correct work.
 	
-#How it works
+# How it works
 	
 	User navigates to a document within SharePoint and selects the Edit in ONLYOFFICE action on context menu or ribbon.
 	
