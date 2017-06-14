@@ -45,4 +45,4 @@ Where the documentserver is the name of the server with the ONLYOFFICE Document 
 	
 * After 10 seconds of inactivity, ONLYOFFICE Document Server sends a POST to the callback URL letting SharePoint ONLYOFFICE solution know that the clients have finished editing the document and closed it.
 	
-* SharePoint ONLYOFFICE solution downloads the new version of the document, replacing the old one.
+* SharePoint ONLYOFFICE solution downloads the new version of the document, replacing the old one. 
